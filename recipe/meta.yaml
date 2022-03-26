@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-druid" %}
-{% set version = "2.3.1" %}
+{% set version = "2.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-apache-druid-{{ version }}.tar.gz
-  sha256: 71abcc5759b97d632ab6b24d67b43ee218175c6e2fe8dce67f8ca8aa643f5df6
+  sha256: 05c44d9dbd36d6601f02d0c85138a9cd20fc780d1fa3b9f91c32c4cb50bec8f8
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
@@ -27,7 +27,7 @@ requirements:
 test:
   imports:
     - airflow.providers.apache.druid
-    - airflow.providers.apache.druid.hooks
+    - airflow.providers.apache.druid.example_dags
   commands:
     - pip check
   requires:
@@ -35,9 +35,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Apache Druid for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-apache-druid package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-apache-druid/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
