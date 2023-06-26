@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-druid" %}
-{% set version = "3.4.0" %}
+{% set version = "3.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-apache-druid-{{ version }}.tar.gz
-  sha256: cd08af0a38ddef5af312b3261d577e952f7079f6c626bbdb426012c9c530a040
+  sha256: f425ebe14250d9ef5cd725234a51603267125181377b740e4602657e72412445
 
 build:
   noarch: python
