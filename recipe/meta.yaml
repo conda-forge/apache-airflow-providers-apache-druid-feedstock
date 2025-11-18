@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-apache-druid" %}
 {% set version = "4.3.1" %}
-{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -21,10 +20,10 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
-    - apache-airflow-providers-common-compat >=1.8.0
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
     - apache-airflow-providers-common-sql >=1.26.0
+    - apache-airflow-providers-common-compat >=1.8.0
     - pydruid >=0.6.6
 
 test:
@@ -40,7 +39,9 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-apache-druid for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/apache/druid/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-apache-druid/stable/index.html
   dev_url: https://github.com/apache/airflow/
