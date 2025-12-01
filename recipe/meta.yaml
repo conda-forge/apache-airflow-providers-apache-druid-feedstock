@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-druid" %}
-{% set version = "4.3.1" %}
+{% set version = "4.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_druid-{{ version }}.tar.gz
-  sha256: a7bc431d90f3e7aeb42352f80d3d66701987484e15630c8002cb5a397682a8ab
+  sha256: c3a4d2045542c56243376057d39aab6956b4171ebd8d150b3c5e6f26e5015ec7
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2.10.0
+    - apache-airflow >=2.11.0
     - apache-airflow-providers-common-sql >=1.26.0
     - apache-airflow-providers-common-compat >=1.8.0
     - pydruid >=0.6.6
