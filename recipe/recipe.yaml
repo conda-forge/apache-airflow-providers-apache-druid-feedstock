@@ -30,7 +30,7 @@ requirements:
 tests:
   - python:
       imports:
-        - airflow.providers.apache.druid
+      - airflow.providers.apache.druid
       pip_check: true
       python_version: ${{ python_min }}.*
 
