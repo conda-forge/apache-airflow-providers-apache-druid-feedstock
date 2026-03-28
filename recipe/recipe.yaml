@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-druid
-  version: "4.5.0"
+  version: "4.5.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_apache_druid-${{ version }}.tar.gz
-  sha256: f2bf1f7da54f3a2962a90f2ce214ac5f84dbea5a0ef9041bf14434d913bab2a3
+  sha256: d6bb9e0636213432dc082dc4c1089c052d1660756efda0aaed0694b6ea56cb16
 
 build:
   noarch: python
