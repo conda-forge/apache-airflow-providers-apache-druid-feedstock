@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-druid
-  version: "4.5.2"
+  version: "4.6.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_apache_druid-${{ version }}.tar.gz
-  sha256: 57b3e17936f033457e645009391d5318e7a5506d7ce8e1921392488de059c2b0
+  sha256: e595e2ea851d1e009e394f30be0391a86e5af7a6848d2c722d7574f3fe2e9be2
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==3.12.0
+    - flit-core ==4.0.2
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
